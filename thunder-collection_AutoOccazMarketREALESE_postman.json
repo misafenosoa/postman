@@ -1,0 +1,1168 @@
+{
+    "info": {
+        "_postman_id": "6f07193c-cd31-410f-a5ad-67cdee988c46",
+        "name": "AutoOccazMarketREALESE",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Admin",
+            "item": [
+                {
+                    "name": "Validation des annonces",
+                    "item": [
+                        {
+                            "name": "Liste des Annonces non validees",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/annoncesNonPostees",
+                                    "path": [
+                                        "annoncesNonPostees"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgVW5pdmVyc2l0eSIsInJvbGUiOiIzMCIsImlkVXNlciI6MSwiaWF0IjoxNzA2NTI3OTg3LCJleHAiOjE3MDY1MzUxODd9.02oaBNswvJasBFZpZKwuSTLcdWjczrTd-F7i5aTJkTEYrXjw-KmBh-bs8rqPIVSVQW5KOHJFKbEgCpt1y_npfw"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Valider une annonce",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/commissions",
+                                    "path": [
+                                        "commissions"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgVW5pdmVyc2l0eSIsInJvbGUiOiIzMCIsImlkVXNlciI6MSwiaWF0IjoxNzA2NTI3OTg3LCJleHAiOjE3MDY1MzUxODd9.02oaBNswvJasBFZpZKwuSTLcdWjczrTd-F7i5aTJkTEYrXjw-KmBh-bs8rqPIVSVQW5KOHJFKbEgCpt1y_npfw"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "// exemple de body (enlever cette ligne)\n\n{\n  \"commission\": {\n    \"annonces\": {\n      \"idAnnonce\": 2\n    },\n    \"pourcentages\": 39,\n    \"validateur\": {\n      \"idutilisateur\": 1\n    }\n  }\n}"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Statistiques",
+                    "item": [
+                        {
+                            "name": "Modeles stats",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/modelesStats",
+                                    "path": [
+                                        "modelesStats"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgVW5pdmVyc2l0eSIsInJvbGUiOiIzMCIsImlkVXNlciI6MSwiaWF0IjoxNzA2NTI3OTg3LCJleHAiOjE3MDY1MzUxODd9.02oaBNswvJasBFZpZKwuSTLcdWjczrTd-F7i5aTJkTEYrXjw-KmBh-bs8rqPIVSVQW5KOHJFKbEgCpt1y_npfw"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "AnnoncesStats",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/AnnoncesClotureesStats",
+                                    "path": [
+                                        "AnnoncesClotureesStats"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgVW5pdmVyc2l0eSIsInJvbGUiOiIzMCIsImlkVXNlciI6MSwiaWF0IjoxNzA2NTI3OTg3LCJleHAiOjE3MDY1MzUxODd9.02oaBNswvJasBFZpZKwuSTLcdWjczrTd-F7i5aTJkTEYrXjw-KmBh-bs8rqPIVSVQW5KOHJFKbEgCpt1y_npfw"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "modeles",
+                    "item": [
+                        {
+                            "name": "post",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/modeles",
+                                    "path": [
+                                        "modeles"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgSVRVIiwicm9sZSI6IjMwIiwiaWF0IjoxNzA1NzY2OTczLCJleHAiOjE3MDU3NzQxNzN9.CKYRdBrY1kQjDzKGZvhn26mX6Npdx3bE7vsKitOJxlsuItZL6iVhEq2ILpSZT4-Q7GbeOE8KvvJeuLFzWER6fA"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"modeles\": {\n    \"nomModele\": \"Nissan 252\",\n    \"carburant\": {\n      \"idCarburant\": 1\n    },\n    \"categorie\": {\n      \"idcategorie\": 1\n    },\n    \"marque\": {\n      \"idMarque\": 1\n    }\n  }\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "get",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/modeles",
+                                    "path": [
+                                        "modeles"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgSVRVIiwicm9sZSI6IjMwIiwiaWF0IjoxNzA2MDAxNDkwLCJleHAiOjE3MDYwMDg2OTB9.rE0NHOPBn3LPXGorYDjJjoz4cnegTL7OtlRvI_T_-DGaq3MXkmEPZr4TVA8s2teaeL6zoKR5tjfR88eH8TfbCA"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "put",
+                            "request": {
+                                "method": "PUT",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/modeles/4",
+                                    "path": [
+                                        "modeles",
+                                        "4"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgSVRVIiwicm9sZSI6IjMwIiwiaWF0IjoxNzA2MDAxNDkwLCJleHAiOjE3MDYwMDg2OTB9.rE0NHOPBn3LPXGorYDjJjoz4cnegTL7OtlRvI_T_-DGaq3MXkmEPZr4TVA8s2teaeL6zoKR5tjfR88eH8TfbCA"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"modeles\": {\n    \"nomModele\": \"Nissan 252\",\n    \"carburant\": {\n      \"idCarburant\": 1\n    },\n    \"categorie\": {\n      \"idcategorie\": 1\n    },\n    \"marque\": {\n      \"idMarque\": 1\n    }\n  }\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "del",
+                            "request": {
+                                "method": "DELETE",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/modeles/4",
+                                    "path": [
+                                        "modeles",
+                                        "4"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "modelesPagination",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/modeles/0/3",
+                                    "path": [
+                                        "modeles",
+                                        "0",
+                                        "3"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Marque",
+                    "item": [
+                        {
+                            "name": "Marque",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/marques",
+                                    "path": [
+                                        "marques"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgSVRVIiwicm9sZSI6IjMwIiwiaWF0IjoxNzA1NzUzNDk5LCJleHAiOjE3MDU3NjA2OTl9.y6p--qCwnv9r8TF3-hYViPQHlBB_UrCda_GZ7AjpCo4urceRU3gJZy0cF9Jg0jxUYtARw6koEcjTCeTSdRj4Bg"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "post",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/marques",
+                                    "path": [
+                                        "marques"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgSVRVIiwicm9sZSI6IjMwIiwiaWF0IjoxNzA1Mzk0NzMzLCJleHAiOjE3MDU0MDE5MzN9.hznpiLxJ-Wj8XjKVQzfZTv3cNQLtkeaHaH2F0oumA-akrWYzgGchYPRheImFTEHTkUhhI1ptgkjjZa0RGaK-sw"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"marque\": {\n    \"marque\": \"Nissan\"\n  }\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "put",
+                            "request": {
+                                "method": "PUT",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/marques/1",
+                                    "path": [
+                                        "marques",
+                                        "1"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"marque\":{\n      \"idMarque\": 1,\n      \"marque\": \"Mercedes kely\"    \n  }\n\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "del",
+                            "request": {
+                                "method": "DELETE",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/marques/-888",
+                                    "path": [
+                                        "marques",
+                                        "-888"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgVW5pdmVyc2l0eSIsInJvbGUiOiIzMCIsImlkVXNlciI6MSwiaWF0IjoxNzA2NTMwNjQzLCJleHAiOjE3MDY1Mzc4NDN9.gVfrJufuY6pyHUgKWxFOitb4gMVo-DMucX4V0dKDe3FZ5-pfNxy41cj5PHmP3FK3FmlOZPGG-Y8HL5VhD4JaVg"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "MarquesPagination",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/marques/0/3",
+                                    "path": [
+                                        "marques",
+                                        "0",
+                                        "3"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Categorie",
+                    "item": [
+                        {
+                            "name": "Categorie",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/categories",
+                                    "path": [
+                                        "categories"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgSVRVIiwicm9sZSI6IjMwIiwiaWF0IjoxNzA1NzUzNDk5LCJleHAiOjE3MDU3NjA2OTl9.y6p--qCwnv9r8TF3-hYViPQHlBB_UrCda_GZ7AjpCo4urceRU3gJZy0cF9Jg0jxUYtARw6koEcjTCeTSdRj4Bg"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Insert",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/categories",
+                                    "path": [
+                                        "categories"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"categorie\":{\n    \"categorie\":\"Voiture de Luxe\"\n  }\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "Delete",
+                            "request": {
+                                "method": "DELETE",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/categories",
+                                    "path": [
+                                        "categories"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "Update",
+                            "request": {
+                                "method": "PUT",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/categories",
+                                    "path": [
+                                        "categories"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "categoriePagination",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/categories/1/1",
+                                    "path": [
+                                        "categories",
+                                        "1",
+                                        "1"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "carburant",
+                    "item": [
+                        {
+                            "name": "post",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/carburants",
+                                    "path": [
+                                        "carburants"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"carburant\":{\n    \"carburant\": \"essence\"\n  }\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "get",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/carburants",
+                                    "path": [
+                                        "carburants"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJVFVAZ21haWwuY29tIiwidXNlcm5hbWUiOiJJVFUgSVRVIiwicm9sZSI6IjMwIiwiaWF0IjoxNzA1NzUzNDk5LCJleHAiOjE3MDU3NjA2OTl9.y6p--qCwnv9r8TF3-hYViPQHlBB_UrCda_GZ7AjpCo4urceRU3gJZy0cF9Jg0jxUYtARw6koEcjTCeTSdRj4Bg"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "carburantsPagination",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/carburants/0/3",
+                                    "path": [
+                                        "carburants",
+                                        "0",
+                                        "3"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "nouveau admin",
+                    "item": [
+                        {
+                            "name": "Nouveaux admins",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/admins",
+                                    "path": [
+                                        "admins"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "GetAdmins Copy",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/admins",
+                                    "path": [
+                                        "admins"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJSb2pvQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiUm9qbyBSb2pvIiwicm9sZSI6IjMwIiwiaWRVc2VyIjo3LCJpYXQiOjE3MDY0NzE3NTEsImV4cCI6MTcwNjQ3ODk1MX0.tj9l93IhtQc1ON2ZDjjvV2hTO5JhWSVc0AoGmkdNQd_tn-dqMACKPWfxR2hLUXh1NrxjnNidnQVhotSl3JAatQ"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "AdminsPagination Copy",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/admins/0/2",
+                                    "path": [
+                                        "admins",
+                                        "0",
+                                        "2"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJSb2pvQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiUm9qbyBSb2pvIiwicm9sZSI6IjMwIiwiaWRVc2VyIjo3LCJpYXQiOjE3MDY0NzE3NTEsImV4cCI6MTcwNjQ3ODk1MX0.tj9l93IhtQc1ON2ZDjjvV2hTO5JhWSVc0AoGmkdNQd_tn-dqMACKPWfxR2hLUXh1NrxjnNidnQVhotSl3JAatQ"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "SimpleUser",
+            "item": [
+                {
+                    "name": "annonces",
+                    "item": [
+                        {
+                            "name": "Annonces Copy",
+                            "item": [
+                                {
+                                    "name": "get",
+                                    "request": {
+                                        "method": "GET",
+                                        "url": {
+                                            "raw": "autooccazmarket.up.railway.app/annonces",
+                                            "path": [
+                                                "annonces"
+                                            ],
+                                            "host": [
+                                                "autooccazmarket",
+                                                "up",
+                                                "railway",
+                                                "app"
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "Creer annonce",
+                                    "request": {
+                                        "method": "POST",
+                                        "url": {
+                                            "raw": "autooccazmarket.up.railway.app/annonces",
+                                            "path": [
+                                                "annonces"
+                                            ],
+                                            "host": [
+                                                "autooccazmarket",
+                                                "up",
+                                                "railway",
+                                                "app"
+                                            ]
+                                        },
+                                        "body": {
+                                            "mode": "raw",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            },
+                                            "raw": "{\n  \"annonces\": {\n    \"modeles\": {\n      \"idModeles\": 2\n    },\n    \"utilisateur\": {\n      \"idutilisateur\": 2\n    },\n    \"etatGeneral\": 4,\n    \"localisation\": \"Ambohibe\",\n    \"prix\": 1057297,\n    \"description\": \"Pas de commentaire\"\n\n  }\n}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "update",
+                                    "request": {
+                                        "method": "PUT",
+                                        "url": {
+                                            "raw": "autooccazmarket.up.railway.app/annonces/9",
+                                            "path": [
+                                                "annonces",
+                                                "9"
+                                            ],
+                                            "host": [
+                                                "autooccazmarket",
+                                                "up",
+                                                "railway",
+                                                "app"
+                                            ]
+                                        },
+                                        "body": {
+                                            "mode": "raw",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            },
+                                            "raw": "{\n\n  \"annonces\": {\n      \"idAnnonce\": 9,\n      \"modeles\": {\n        \"idModeles\": 7,\n        \"nomModele\": \"Nissan 24\",\n        \"categorie\": {\n          \"idcategorie\": 2,\n          \"categorie\": \"Voiture de sport\"\n        },\n        \"marque\": {\n          \"idMarque\": 4,\n          \"marque\": \"Nissan\"\n        },\n        \"carburant\": {\n          \"idCarburant\": 2,\n          \"carburant\": \"Essence\"\n        }\n      },\n      \"utilisateur\": {\n        \"idutilisateur\": 1,\n        \"mail\": \"mis@gmail.com\",\n        \"mdp\": \"3a1208de7e66f1706c65c2715c6c3fd4bd13d141a1b29ce267944c94e3cae0ec\",\n        \"prenom\": \"Beubeu\",\n        \"birthday\": \"2003-02-02\",\n        \"nom\": \"Ran\",\n        \"hierarchie\": 1\n      },\n      \"etatGeneral\": 9,\n      \"localisation\": \"Tsiadana\",\n      \"etatValidation\": 20,\n      \"photoAnnonces\": [],\n      \"prix\": 100.0,\n      \"description\": \"Ce modele de voiture est tres recherche en ce moment puisque c'est un ancien modele qui n'existe que 120 exemplaires dans le monde.\"\n    },\n  \"errors\": null,\n  \"tokenInformation\": null\n}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "annoncesfiltre",
+                                    "request": {
+                                        "method": "POST",
+                                        "url": {
+                                            "raw": "autooccazmarket.up.railway.app/annoncesfiltre",
+                                            "path": [
+                                                "annoncesfiltre"
+                                            ],
+                                            "host": [
+                                                "autooccazmarket",
+                                                "up",
+                                                "railway",
+                                                "app"
+                                            ]
+                                        },
+                                        "body": {
+                                            "mode": "raw",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            },
+                                            "raw": "{\n  \"listAnnonces\": [],\n  \"modeles\": [],\n  \"categories\": [],\n  \"marque\": [],\n  \"carburant\":[],\n  \"order\": \"asc\",\n  \"one\":null,\n  \"two\":null\n}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": "AnnoncesKeyWord",
+                                    "request": {
+                                        "method": "GET",
+                                        "url": {
+                                            "raw": "autooccazmarket.up.railway.app/annoncesAccueilKeyWord",
+                                            "path": [
+                                                "annoncesAccueilKeyWord"
+                                            ],
+                                            "host": [
+                                                "autooccazmarket",
+                                                "up",
+                                                "railway",
+                                                "app"
+                                            ]
+                                        },
+                                        "body": {
+                                            "mode": "raw",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            },
+                                            "raw": "{\n  \"listAnnonces\": [],\n  \"modeles\": [],\n  \"categories\": [],\n  \"marque\": [],\n  \"carburant\":[],\n  \"order\": \"asc\",\n  \"key\":\"recherche\"\n}"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Historique par utilisateur",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/annoncesHistorique/10",
+                                    "path": [
+                                        "annoncesHistorique",
+                                        "10"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkeWJvYm9AZ21haWwuY29tIiwidXNlcm5hbWUiOiJEeWJvYm8gRHliYm9ibyIsInJvbGUiOiIxIiwiaWRVc2VyIjoxMSwiaWF0IjoxNzA3NTcwOTI4LCJleHAiOjE3MDc1NzgxMjh9.kXjibP_NQEzHGRN_bf3_JGWwdfJhOdE2RNJN60KzUtM8UDMd9Vp93h4QqYBlGnWs2dv1ej6STJJP8lwBP17DNg"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Annonces affichees par User",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/annoncesAccueilByUser/11",
+                                    "path": [
+                                        "annoncesAccueilByUser",
+                                        "11"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "KeyWords",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/annoncesAccueilKeyWord",
+                                    "path": [
+                                        "annoncesAccueilKeyWord"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n\n  \"key\":\"x\"\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "AnnoncesFavoris",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/annoncesFavoris/10",
+                                    "path": [
+                                        "annoncesFavoris",
+                                        "10"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "MisAJourFavori",
+                            "request": {
+                                "method": "PUT",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/annoncesFavoris/10/4",
+                                    "path": [
+                                        "annoncesFavoris",
+                                        "10",
+                                        "4"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "Annonces accueil sans login",
+                            "request": {
+                                "method": "GET",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/annoncesAccueil",
+                                    "path": [
+                                        "annoncesAccueil"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "AnnoncesFiltreParUser",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/annoncesAccueilByUserFiltre",
+                                    "path": [
+                                        "annoncesAccueilByUserFiltre"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n    \"modeles\": [],\n    \"categories\": [],\n    \"marque\": [],\n    \"carburant\": [],\n    \"one\": 0,\n    \"two\": 1000000,\n    \"order\": \"desc\",\n    \"userID\": 10\n}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "AnnoncesKeywordsConnected",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/annoncesAccueilByUserKeywords",
+                                    "path": [
+                                        "annoncesAccueilByUserKeywords"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "header": [
+                                    {
+                                        "key": "Authorization",
+                                        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkeWJvYm9AZ21haWwuY29tIiwidXNlcm5hbWUiOiJEeWJvYm8gRHliYm9ibyIsInJvbGUiOiIxIiwiaWRVc2VyIjoxMSwiaWF0IjoxNzA3NTY3NDIzLCJleHAiOjE3MDc1NzQ2MjN9.g7O3h1vcFWlpvfhq4kjGV2OLBh8BmcQZCes2N6LzkNz682U_vDT_zZ9M890JLlGIaKel3puYLxDKkH0LA0I4LA"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n\n  \"key\":\"a\",\n  \"userID\":10\n}"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Validation des annonces comme vendus",
+                    "item": [
+                        {
+                            "name": "post Copy Copy",
+                            "request": {
+                                "method": "POST",
+                                "url": {
+                                    "raw": "autooccazmarket.up.railway.app/validationAnnoncesHistoriques",
+                                    "path": [
+                                        "validationAnnoncesHistoriques"
+                                    ],
+                                    "host": [
+                                        "autooccazmarket",
+                                        "up",
+                                        "railway",
+                                        "app"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    },
+                                    "raw": "{\n  \"validationAnnoncesHistorique\": {\n    \"annonces\": {\n      \"idAnnonce\": 2\n    },\n    \"description\": \"Vendue\",\n    \"validateur\": {\n      \"idutilisateur\": 2\n    },\n    \"etatValidation\": 30\n  }\n}"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Authentification",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "autooccazmarket.up.railway.app/login",
+                            "path": [
+                                "login"
+                            ],
+                            "host": [
+                                "autooccazmarket",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"utilisateur\": {\n    \"mail\": \"manoa@gmail.com\"\n  },\n    \"mdp\": \"ITU\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "CreerCompte",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "autooccazmarket.up.railway.app/register",
+                            "path": [
+                                "register"
+                            ],
+                            "host": [
+                                "autooccazmarket",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"utilisateur\": {\n    \"mail\": \"manoa@gmail.com\",\n    \"prenom\": \"Manoa\",\n    \"nom\": \"Manoa\",\n    \"birthday\": \"2003-02-06\",\n    \"hierarchie\":1\n  },\n  \"mdp\": \"ITU\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Utilisateur",
+            "item": [
+                {
+                    "name": "Liste",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "autooccazmarket.up.railway.app/utilisateurs",
+                            "path": [
+                                "utilisateurs"
+                            ],
+                            "host": [
+                                "autooccazmarket",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "PhotoAnnonce",
+            "item": [
+                {
+                    "name": "del Copy Copy",
+                    "request": {
+                        "method": "GET"
+                    }
+                },
+                {
+                    "name": "put Copy Copy",
+                    "request": {
+                        "method": "GET"
+                    }
+                },
+                {
+                    "name": "get Copy Copy",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "autooccazmarket.up.railway.app/photoannonces/13",
+                            "path": [
+                                "photoannonces",
+                                "13"
+                            ],
+                            "host": [
+                                "autooccazmarket",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "post Copy Copy",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "autooccazmarket.up.railway.app/photoannonces",
+                            "path": [
+                                "photoannonces"
+                            ],
+                            "host": [
+                                "autooccazmarket",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n    \"photos\": [\n        \"https://firebasestorage.googleapis.com/v0/b/misa-misa-a92a7.appspot.com/o/images%2F1.png?alt=media&token=01a7c7a3-87a2-4f3e-93a0-83f2eb982cb7\"\n    ]\n}"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
